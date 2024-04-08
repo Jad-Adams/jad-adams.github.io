@@ -13,28 +13,31 @@ document.addEventListener(`keydown`, function (keyPress) {
 });
 
 function questionAnswer() {
-  let question = questionInput.value;
-  question.toLowerCase();
+  if (questionInput.value) {
+    let question = questionInput.value;
+    question.toLowerCase();
 
-  let secretNumber = Math.trunc(Math.random() * 2 + 1);
+    let secretNumber = Math.trunc(Math.random() * 2 + 1);
 
-  userQuestion.textContent = `Your question was "${question}?"`;
+    userQuestion.textContent = `Your question was "${question}?"`;
 
-  function machineThinking() {
-    thinkingText.textContent = `The machine is thinking about it`;
-  }
-
-  function displayAnswer() {
-    if (secretNumber === 1) {
-      answerText.textContent = `No.`;
-    } else if (secretNumber === 2) {
-      answerText.textContent = `Yes.`;
+    function machineThinking() {
+      thinkingText.textContent = `The machine is thinking about it`;
     }
+
+    function displayAnswer() {
+      if (secretNumber === 1) {
+        answerText.textContent = `No.`;
+      } else if (secretNumber === 2) {
+        answerText.textContent = `Yes.`;
+      }
+    }
+
+    setTimeout(machineThinking, 1000);
+    setTimeout(displayAnswer, 3000);
+
+    return question;
+  } else {
+    alert(`You must ask the machine a question`);
   }
-
-  setTimeout(machineThinking, 1000);
-  setTimeout(displayAnswer, 3000);
-
-  console.log(`User question: ${question}`);
-  return question;
 }
