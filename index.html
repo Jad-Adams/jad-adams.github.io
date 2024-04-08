@@ -3,22 +3,31 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>The Sandbox</title>
+    <title>The Decider Machine</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <h1>This is the decider machine</h1>
-    <h3>Ask a simple yes or no question</h3>
-    <input
-      id="question-input"
-      type="text"
-      placeholder="What is your question?"
-    />
-    <button class="btn ask-btn">Ask!</button>
-    <h3 class="user-question"></h3>
-    <h2 class="answer"></h2>
+    <h2>
+      The machine <span style="font-style: italic">only</span> accepts closed
+      questions. <br />
+      It has no time for silly questions.
+    </h2>
+
+    <div class="input-area">
+      <input
+        id="question-input"
+        type="text"
+        placeholder="What is your question?"
+      />
+      <button class="btn ask-btn">Ask</button>
+    </div>
+
+    <p class="user-question"></p>
+    <p class="thinking"></p>
+    <p class="answer"></p>
     <script src="script.js"></script>
   </body>
 </html>
