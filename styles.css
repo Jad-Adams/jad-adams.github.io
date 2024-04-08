@@ -1,16 +1,21 @@
-* {
+*,
+*::before,
+*::after {
   font-family: "Courier New", Courier, monospace;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   background-color: #d0e7ee;
   color: #02151b;
-  padding: 24px 40px;
+  padding: 24px 24px;
 }
 
 h1 {
-  font-size: 5rem;
-  margin-bottom: 40px;
+  font-size: 3rem;
+  margin: 0 0 32px 0;
 }
 
 .hidden {
@@ -23,7 +28,7 @@ h1 {
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
-  margin: 40px 0;
+  margin: 24px 0;
 }
 
 #question-input {
@@ -42,7 +47,7 @@ h1 {
 }
 
 .ask-btn {
-  height: 56px;
+  height: 48px;
   border: none;
   border-radius: 4px;
   font-size: 1.5rem;
@@ -58,7 +63,8 @@ h1 {
 }
 
 .user-question {
-  font-size: 2.2rem;
+  font-size: 1.5rem;
+  margin-bottom: 16px;
 }
 
 .thinking {
@@ -68,17 +74,22 @@ h1 {
 .answer {
   font-size: 5rem;
   font-weight: 900;
-  margin-top: 80px;
+  margin-top: 40px;
 }
 
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 430px) {
   body {
     padding: 16px;
   }
 
   h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 32px;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+    line-height: 150%;
   }
 
   #question-input {
@@ -86,5 +97,14 @@ h1 {
   }
   .ask-btn {
     width: 100%;
+  }
+
+  .user-question {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+
+  .thinking {
+    font-size: 1rem;
   }
 }

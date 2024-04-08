@@ -26,12 +26,9 @@ function questionAnswer() {
 
   function displayAnswer() {
     if (secretNumber === 1) {
-      answerText.textContent = `No`;
+      answerText.textContent = `No.`;
     } else if (secretNumber === 2) {
-      answerText.textContent = `Yes`;
-    }
-    if (question === `oeb`) {
-      answerText.textContent = `Oeb?`;
+      answerText.textContent = `Yes.`;
     }
   }
 
