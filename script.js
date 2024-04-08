@@ -30,7 +30,7 @@ function questionAnswer() {
     } else if (secretNumber === 2) {
       answerText.textContent = `Yes`;
     }
-    if (question === `oeb` || `oeb?`) {
+    if (question === `oeb`) {
       answerText.textContent = `Oeb?`;
     }
   }
