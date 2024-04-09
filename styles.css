@@ -53,13 +53,13 @@ h1 {
   font-size: 1.5rem;
   font-weight: 500;
   padding: 0 24px;
-  background-color: #02151b;
+  background-color: #538797;
   color: white;
 }
 
 .ask-btn:hover {
   background-color: #204d5b;
-  transition: 1.5s;
+  transition: 300ms;
 }
 
 .user-question {
