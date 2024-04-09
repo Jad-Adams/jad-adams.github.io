@@ -4,7 +4,10 @@ const answerText = document.querySelector(`.answer`);
 const userQuestion = document.querySelector(`.user-question`);
 const thinkingText = document.querySelector(`.thinking`);
 
-askBtn.addEventListener(`click`, questionAnswer);
+// Submitting question
+askBtn.addEventListener(`click`, function () {
+  questionAnswer();
+});
 
 document.addEventListener(`keydown`, function (keyPress) {
   if (keyPress.key === `Enter` && questionInput.value) {
@@ -12,12 +15,26 @@ document.addEventListener(`keydown`, function (keyPress) {
   }
 });
 
+// Reset form
+questionInput.addEventListener(`click`, function () {
+  init();
+});
+
+function init() {
+  userQuestion.textContent = ``;
+  thinkingText.textContent = ``;
+  answerText.textContent = ``;
+}
+
+// Evaluating question
 function questionAnswer() {
   if (questionInput.value) {
     let question = questionInput.value;
     question.toLowerCase();
 
     let secretNumber = Math.trunc(Math.random() * 2 + 1);
+
+    removeFocus();
 
     userQuestion.textContent = `Your question was "${question}?"`;
 
@@ -36,8 +53,13 @@ function questionAnswer() {
     setTimeout(machineThinking, 1000);
     setTimeout(displayAnswer, 3000);
 
+    questionInput.value = ``;
     return question;
   } else {
     alert(`You must ask the machine a question`);
   }
+}
+
+function removeFocus() {
+  questionInput.blur();
 }
