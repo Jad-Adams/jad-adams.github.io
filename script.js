@@ -29,14 +29,15 @@ function init() {
 // Evaluating question
 function questionAnswer() {
   if (questionInput.value) {
-    let question = questionInput.value;
-    question.toLowerCase();
+    //storing question & removing punctuation
+    let question = questionInput.value.replace(/[^\w\s]|_/g, "");
 
+    //the decider machine
     let secretNumber = Math.trunc(Math.random() * 2 + 1);
 
     removeFocus();
 
-    userQuestion.textContent = `Your question was "${question}?"`;
+    userQuestion.textContent = `Your question is "${question}?"`;
 
     function machineThinking() {
       thinkingText.textContent = `The machine is thinking about it`;
