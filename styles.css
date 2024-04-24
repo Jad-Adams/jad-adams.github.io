@@ -1,17 +1,36 @@
+:root {
+  --background: #273043;
+  --text-dark: #9197ae;
+  --text-light: #eff6ee;
+}
+
 *,
 *::before,
 *::after {
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Darker Grotesque";
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  font-family: "Bungee";
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: var(--text-dark);
+}
+
 html,
 body {
   height: 100%;
-  background-color: #d0e7ee;
-  color: #02151b;
+  background-color: var(--background);
+  color: var(--text-dark);
   padding: 16px 16px 8px 16px;
 }
 
@@ -22,9 +41,29 @@ body > footer {
 }
 
 h1 {
+  font-family: "Bungee";
   font-size: 3rem;
   margin: 0 0 32px 0;
 }
+
+h2 {
+  font-weight: 400;
+}
+
+/* Font import start */
+.bungee-regular {
+  font-family: "Bungee", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.darker-grotesque-main {
+  font-family: "Darker Grotesque", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+/* Font import end */
 
 .hidden {
   display: none;
@@ -42,31 +81,35 @@ h1 {
 #question-input {
   height: 48px;
   width: 420px;
-  background-color: #eaf3f6;
-  border: 4px solid #538797;
+  background-color: var(--text-dark);
+  border: none;
   border-radius: 4px;
   font-size: 1.5rem;
 }
 
+#question-input::placeholder {
+  color: var(--background);
+}
+
 #question-input:focus {
-  background-color: white;
-  border: 4px solid #204d5b;
+  background-color: var(--text-light);
+  border: none;
   outline: none;
 }
 
 .ask-btn {
+  font-family: "Bungee";
   height: 48px;
   border: none;
   border-radius: 4px;
   font-size: 1.5rem;
-  font-weight: 500;
   padding: 0 24px;
-  background-color: #538797;
-  color: white;
+  background-color: var(--text-dark);
+  color: var(--background);
 }
 
 .ask-btn:hover {
-  background-color: #204d5b;
+  background-color: var(--text-light);
   transition: 300ms;
 }
 
@@ -80,8 +123,8 @@ h1 {
 }
 
 .answer {
+  font-family: "Bungee";
   font-size: 5rem;
-  font-weight: 900;
   margin-top: 40px;
 }
 
