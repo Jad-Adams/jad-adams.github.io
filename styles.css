@@ -1,6 +1,6 @@
 :root {
-  --background: #273043;
-  --text-dark: #9197ae;
+  --background: #182938;
+  --text-dark: #b7d4f5;
   --text-light: #eff6ee;
 }
 
@@ -15,14 +15,14 @@
 
 a {
   text-decoration: none;
-  font-family: "Bungee";
+  font-family: "Tiny5";
 }
 
 a:hover {
   text-decoration: underline;
 }
 
-a:visited {
+a:any-link {
   color: var(--text-dark);
 }
 
@@ -41,7 +41,7 @@ body > footer {
 }
 
 h1 {
-  font-family: "Bungee";
+  font-family: "Tiny5";
   font-size: 3rem;
   margin: 0 0 32px 0;
 }
@@ -63,6 +63,13 @@ h2 {
   font-weight: 400;
   font-style: normal;
 }
+
+.tiny5-regular {
+  font-family: "Tiny5", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* Font import end */
 
 .hidden {
@@ -98,7 +105,7 @@ h2 {
 }
 
 .ask-btn {
-  font-family: "Bungee";
+  font-family: "Tiny5";
   height: 48px;
   border: none;
   border-radius: 4px;
