@@ -51,11 +51,11 @@ h2 {
 }
 
 /* Font import start */
-.bungee-regular {
+/* .bungee-regular {
   font-family: "Bungee", sans-serif;
   font-weight: 400;
   font-style: normal;
-}
+} */
 
 .darker-grotesque-main {
   font-family: "Darker Grotesque", sans-serif;
@@ -130,7 +130,7 @@ h2 {
 }
 
 .answer {
-  font-family: "Bungee";
+  font-family: "Darker Grotesque";
   font-size: 5rem;
   margin-top: 40px;
 }
