@@ -26,24 +26,25 @@
   </head>
   <body>
     <h1>This is the Decider Machine</h1>
-    <h2>
-      The machine <span style="font-style: italic">only</span> accepts closed
-      questions. <br />
-      It has no time for silly questions.
-    </h2>
+    <section class="yes-or-no">
+      <h2>
+        The machine <span style="font-style: italic">only</span> accepts closed
+        questions. <br />
+        It has no time for silly questions.
+      </h2>
+      <div class="input-area">
+        <input
+          id="question-input"
+          type="text"
+          placeholder=" What is your question?"
+        />
+        <button class="btn ask-btn">ASK</button>
+      </div>
 
-    <div class="input-area">
-      <input
-        id="question-input"
-        type="text"
-        placeholder=" What is your question?"
-      />
-      <button class="btn ask-btn">ASK</button>
-    </div>
-
-    <p class="user-question"></p>
-    <p class="thinking"></p>
-    <p class="answer"></p>
+      <p class="user-question"></p>
+      <p class="thinking"></p>
+      <p class="answer"></p>
+    </section>
 
     <footer>
       <a href="https://www.jadadams.com/">Made by Jad</a>

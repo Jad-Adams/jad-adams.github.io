@@ -29,9 +29,12 @@ a:any-link {
 html,
 body {
   height: 100%;
+}
+
+body {
   background-color: var(--background);
   color: var(--text-dark);
-  padding: 16px 16px 8px 16px;
+  padding: 32px 32px 16px 32px;
 }
 
 body > footer {
@@ -51,11 +54,6 @@ h2 {
 }
 
 /* Font import start */
-/* .bungee-regular {
-  font-family: "Bungee", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-} */
 
 .darker-grotesque-main {
   font-family: "Darker Grotesque", sans-serif;
